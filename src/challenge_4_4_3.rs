@@ -32,12 +32,12 @@ mod tests {
     }
 
     #[test]
-    fn safe_root_reciprocal_negative_fourth() {
+    fn safe_root_reciprocal_negative_one_fourth() {
         assert_eq!(safe_root_reciprocal(-0.25), None);
     }
 
     #[test]
-    fn safe_root_reciprocal_fourth() {
+    fn safe_root_reciprocal_one_fourth() {
         assert_eq!(safe_root_reciprocal(0.25), Some(2.0));
     }
 }
