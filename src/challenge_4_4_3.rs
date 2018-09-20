@@ -2,9 +2,9 @@ use super::challenge_4_4_2::safe_reciprocal;
 
 pub fn safe_root(x: f64) -> Option<f64> {
     if x >= 0.0 {
-        return Some(x.sqrt());
+        Some(x.sqrt())
     } else {
-        return None;
+        None
     }
 }
 
@@ -12,14 +12,14 @@ pub fn composition<T, U, V, F: Fn(T) -> Option<U>, G: Fn(U) -> Option<V>>(
     g: G,
     f: F,
 ) -> impl Fn(T) -> Option<V> {
-    return move |x| match f(x) {
+    move |x| match f(x) {
         None => None,
         Some(value) => g(value),
-    };
+    }
 }
 
 pub fn safe_root_reciprocal(x: f64) -> Option<f64> {
-    return composition(safe_root, safe_reciprocal)(x);
+    composition(safe_root, safe_reciprocal)(x)
 }
 
 #[cfg(test)]

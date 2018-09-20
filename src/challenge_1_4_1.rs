@@ -1,5 +1,5 @@
 pub fn identity<T>(x: T) -> T {
-    return x;
+    x
 }
 
 #[cfg(test)]

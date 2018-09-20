@@ -1,5 +1,5 @@
 pub fn composition<T, U, V, F: Fn(T) -> U, G: Fn(U) -> V>(g: G, f: F) -> impl Fn(T) -> V {
-    return move |x| g(f(x));
+    move |x| g(f(x))
 }
 
 #[cfg(test)]

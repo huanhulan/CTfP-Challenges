@@ -1,8 +1,8 @@
 pub fn safe_reciprocal(x: f64) -> Option<f64> {
     if x == 0.0 {
-        return None;
+        None
     } else {
-        return Some(1.0 / x);
+        Some(1.0 / x)
     }
 }
 

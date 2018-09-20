@@ -4,7 +4,7 @@ use std::hash::Hash;
 pub fn memoize<T: Hash + Eq + Clone, U: Clone, F: Fn(T) -> U>(f: F) -> impl FnMut(T) -> U {
     let mut map = HashMap::new();
 
-    return move |arg| map.entry(arg.clone()).or_insert_with(|| f(arg)).clone();
+    move |arg| map.entry(arg.clone()).or_insert_with(|| f(arg)).clone()
 }
 
 #[cfg(test)]

@@ -1,17 +1,17 @@
 pub fn bool_to_bool_identity(x: bool) -> bool {
-    return x;
+    x
 }
 
 pub fn bool_to_bool_not(x: bool) -> bool {
-    return !x;
+    !x
 }
 
 pub fn bool_to_bool_true(_: bool) -> bool {
-    return true;
+    true
 }
 
 pub fn bool_to_bool_false(_: bool) -> bool {
-    return false;
+    false
 }
 
 #[cfg(test)]
