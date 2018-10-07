@@ -1,3 +1,6 @@
+#![feature(unboxed_closures)]
+#![feature(fn_traits)]
+
 extern crate rand;
 
 pub mod challenge_1_4_1;
